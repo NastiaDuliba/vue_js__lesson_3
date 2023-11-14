@@ -1,0 +1,156 @@
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/fonts.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="js/script.js"></script>
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+   <title>Lesson 2</title>
+</head>
+<body>
+   <style>
+    .selected{
+      background-color: blue;
+    }
+     
+        
+        
+   
+      </style>
+   <div class="wrapper">
+      <main class="main">
+      <div class="main__container">
+         <h2>завдання № 2</h2>
+         <div id="app">
+        <div class="main__block">
+         <div class="main__boys">
+           <div class="{selected :  selectBoy(boy.id)}"  @click="selectBoy(boy.id)" v-for="boy,  in  boys" :key="boy.id"> {{boy.name}} </div>
+          </div>
+         <div class="main__girls">
+          <div  class="{selected : selectGirl(girl.id)}" @click="selectGirl(girl.id)"  v-for="(girl, index) in girls" :key="girl.id" > {{girl.name}} </div>
+         </div>
+         
+        </div>
+          <button :disabled="!selectedBoy || !selectedGirl " @click="addPair" >Додати</button>
+          <div class="main__couples" v-for="(pair, index) in selectedPair" :key="index">
+         
+            {{pair.boyName}} - {{pair.girlName}}
+          
+          </div>
+          <div>
+            <button @click="removePair(selectedPair)">Видалити</button>
+          </div>
+         
+         
+         
+        
+           
+             
+          </div>
+      </div>
+      
+   </main>
+
+
+<script>
+//Задача 6. Пари для танців. Поступово вибираємо хлопця, дівчину і додаємо у обрані пари. Пару можна видалити. Поки не вибрано хлопця і дівчину кнопка «Додати» заблокована.  Якщо не вистачає хлопців або дівчат вибір також блокується.
+  
+  const {createApp} = Vue
+
+ createApp({
+  data(){
+     return{   
+  
+      girls : [{
+        id:1,
+        name:'Оксана'
+      },
+      {
+        id:2,
+        name:'Наталія'
+      },{
+        id:3,
+        name:'Тетяна'
+      }],
+      boys :
+      [{
+        id:1,
+        name:'Іван'
+      },
+      {
+        id:2,
+        name:'Петро'
+      },{
+        id:3,
+        name:'Степан'
+      }], 
+      selectedBoy: null,
+      selectedGirl:null,
+    
+     selectedPair:[]
+      
+      
+     }
+    
+  
+
+  
+  },
+
+
+computed:{
+  
+ 
+   
+ 
+ 
+   },
+   methods: {
+  selectBoy(boyId) {
+   
+    this.selectedBoy = this.selectedBoy === boyId ? null : boyId;
+
+
+    
+    console.log(this.selectedBoy);
+  },
+  selectGirl(girlId) {
+    this.selectedGirl = this.selectedGirl === girlId ? null : girlId;
+    console.log(this.selectedGirl);
+  },
+  addPair() {
+
+    const boy = this.boys.find(b => b.id === this.selectedBoy);
+    const girl = this.girls.find(g => g.id === this.selectedGirl);
+
+    if (boy && girl) {
+      this.selectedPair.push({ boyName: boy.name, girlName: girl.name });
+      this.selectedBoy = null;
+      this.selectedGirl = null;
+    }
+  },
+  removePair() {
+ 
+    
+    this.selectedPair.splice(0, 1);
+  }
+}
+
+   
+   
+ 
+  
+
+
+}).mount('#app')
+  
+  </script>
+   </div>
+</body>
+</html>

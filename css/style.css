@@ -1,0 +1,249 @@
+body {
+  font-family: "Larsseit", sans-serif;
+  background: rgb(0, 64, 93);
+  color: #fff;
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  padding: 30px 15px;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+[class*="__container"] {
+  max-width: 100%;
+}
+
+main h2 {
+  padding: 50px 0;
+  text-transform: uppercase;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 3px;
+}
+td,
+th {
+  padding: 10px;
+}
+table {
+  display: inline-block;
+}
+
+.shop-receip {
+  border: 2px solid #212121;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.shop-receip__header {
+  text-align: center;
+}
+.shop-receip__header h1 {
+  text-align: center;
+  padding: 10px;
+}
+.shop-receip__header p {
+  text-align: center;
+  padding: 5px;
+}
+.shop-receip__products {
+  display: flex;
+}
+.products-shop-receip {
+}
+.products-shop-receip__price {
+}
+.quantityshop-receip__column {
+  display: flex;
+  border: 2px solid #212121;
+  padding: 10px;
+  justify-content: space-between;
+  gap: 20px;
+}
+.shop-receip__item_01 {
+  border: 2px solid #212121;
+  padding: 10px;
+}
+.quantityshop-receip__numeric {
+  border: 2px solid #212121;
+  padding: 10px;
+}
+.shop-receip__quantity {
+  border: 2px solid #212121;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.quantityshop-receip {
+}
+.quantityshop-receip__item_01 {
+  border: 2px solid #212121;
+  padding: 10px;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+.quantityshop-receip__item_02 {
+  border: 2px solid #212121;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  min-height: 40px;
+}
+.quantityshop-receip__item_03 {
+  border: 2px solid #212121;
+  padding: 10px;
+  min-height: 40px;
+}
+.shop-receip__total {
+  padding: 10px;
+  line-height: 1.5;
+  font-size: 24px;
+}
+
+.wrapper {
+}
+.main {
+}
+.main__container {
+}
+.task_hover:hover {
+  background: #3d0000;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.task_hover {
+  border: 3px solid #960569;
+  padding: 20px;
+  min-height: 200px;
+  margin: 10px;
+}
+.main__task {
+  display: grid;
+}
+.task {
+}
+
+h3 {
+  text-align: center;
+  padding: 10px;
+}
+p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+@media (max-width: 700px) {
+  .main__task {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+
+/*================================================================================*/
+
+/*lessons3*/
+.main {
+  display: flex;
+  justify-content: center;
+}
+.table {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.table__en {
+  margin-bottom: 10px;
+  border: #960569 solid 2px;
+  padding: 10px;
+}
+.table__ua {
+  margin-bottom: 10px;
+  border: #960569 solid 2px;
+  padding: 10px;
+}
+button {
+  display: inline-block;
+  border: 1px solid #960569;
+  padding: 5px;
+  margin: 5px;
+}
+div {
+}
+.en {
+  display: flex;
+  flex-direction: column;
+}
+.ua {
+  display: flex;
+  flex-direction: column;
+}
+.list {
+  display: flex;
+  gap: 50px;
+}
+.list__container {
+  width: 200px;
+  border: #960569 solid 2px;
+  padding: 5px;
+  height: 500px;
+}
+.list__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: #960569 solid 2px;
+  padding: 0px 5px;
+  margin-bottom: 5px;
+}
+.list__items > div {
+}
+h4 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 14px;
+}
+
+.main__container {
+}
+.main__block {
+  display: flex;
+  gap: 50px;
+}
+.main__boys div {
+  margin-bottom: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.main__girls div {
+  padding: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.main__boys div:hover {
+  outline: #212121 solid 2px;
+}
+.main__girls div:hover {
+  outline: #212121 solid 2px;
+}
+.main__couples {
+}
+.main__boys {
+  border: #212121 solid 2px;
+  padding: 10px;
+}
+.main__girls {
+  border: #212121 solid 2px;
+  padding: 10px;
+}
